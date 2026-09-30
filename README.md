@@ -5,7 +5,6 @@ Java 17 implementation for the homework scenario: employee management, payment p
 ## Run
 
 ```text
-mvn test
 mvn package
 java -cp target/classes org.example.payroll.PayrollApplication
 ```
@@ -31,6 +30,18 @@ The program then prints each employee's gross salary, tax, and net salary, follo
 ```text
 java -cp target/classes org.example.payroll.PayrollApplication --demo
 ```
+
+## Run Tests
+
+The test programs use plain Java checks and do not require JUnit or another testing framework. Compile them and run each test program with:
+
+```text
+mvn test-compile
+java -cp "target/classes;target/test-classes" org.example.payroll.PayrollServiceBlackBoxTest
+java -cp "target/classes;target/test-classes" org.example.payroll.PayrollServiceWhiteBoxTest
+```
+
+Each program prints a PASS or FAIL line for every case and a final count.
 
 ## Functional requirements
 
